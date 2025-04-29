@@ -6,6 +6,7 @@ let board = [
   [0, 0, 0],
 ];
 let player = "O";
+message.textContent = player + "の番です！";
 function Overwrite(num1, num2) {
   if (isEnd) return;
   num1--;
@@ -18,6 +19,7 @@ function Overwrite(num1, num2) {
       .setAttribute("data-symbol", player);
     judgement();
     player == "O" ? (player = "X") : (player = "O");
+    message.textContent = player + "の番です！";
     console.log(board);
   }
 }
