@@ -1,0 +1,66 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #f1f2f6, #dfe4ea);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1#message {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #2f3542;
+  text-shadow: 1px 1px 2px #ced6e0;
+}
+
+table {
+  border-collapse: collapse;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+td {
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 2.5rem;
+  font-weight: bold;
+  border: 2px solid #57606f;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  background-color: #f7f9fa;
+}
+
+td:hover {
+  background-color: #ced6e0;
+  transform: scale(1.05);
+}
+
+td:active {
+  background-color: #a4b0be;
+}
+
+/* 色分け（JavaScriptで設定された textContent に応じて） */
+td::after {
+  content: attr(data-symbol);
+  color: inherit;
+}
+
+td[data-symbol="O"] {
+  color: #1e90ff; /* 青 */
+}
+
+td[data-symbol="X"] {
+  color: #ff4757; /* 赤 */
+}
+
+@media (max-width: 500px) {
+  td {
+    width: 65px;
+    height: 65px;
+    font-size: 2rem;
+  }
+}
