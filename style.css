@@ -64,3 +64,25 @@ td[data-symbol="X"] {
     font-size: 2rem;
   }
 }
+input[type="submit"] {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #2ed573; /* 緑系 */
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+input[type="submit"]:hover {
+  background-color: #1dd1a1;
+  transform: scale(1.05);
+}
+
+input[type="submit"]:active {
+  background-color: #10ac84;
+}
